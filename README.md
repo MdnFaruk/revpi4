@@ -47,7 +47,6 @@ The system supports:
 1. Clone this repository:
    ```bash
    git clone <repository-url>
-   cd revpi4_connect
    ```
 
 2. Build and run the Docker container:
