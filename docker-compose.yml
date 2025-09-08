@@ -1,0 +1,19 @@
+version: "2.1"
+
+services:
+  revpi_pitest:
+    build: .
+    privileged: true
+    devices:
+      - "/dev/piControl0:/dev/piControl0"
+    tmpfs:
+      - /tmp
+    stdin_open: true
+    tty: true
+    network_mode: "host"
+    restart: unless-stopped
+    labels:
+      io.balena.features.kernel-modules: '1'
+      io.balena.features.sysfs: '1'
+      io.balena.features.procfs: '1'
+      io.balena.features.firmware: '1'

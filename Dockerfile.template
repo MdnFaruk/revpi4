@@ -1,0 +1,38 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:latest
+
+# Install required packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    cmake \
+    build-essential \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Clone piTest repo with submodules
+RUN git clone --recurse-submodules https://gitlab.com/revolutionpi/revpi-pitest.git
+
+# Remove doc folder and modify CMakeLists.txt to skip doc subdirectory
+RUN rm -rf revpi-pitest/doc && \
+    sed -i '/add_subdirectory(doc)/d' revpi-pitest/CMakeLists.txt
+
+# Build piTest binary
+RUN mkdir -p revpi-pitest/build && \
+    cd revpi-pitest/build && \
+    cmake .. && \
+    make -j$(nproc) && \
+    ls -la . && \
+    echo "Build completed, checking for piTest binary:"
+
+# Copy piTest to /usr/local/bin for global access
+RUN if [ -f /usr/src/app/revpi-pitest/build/src/piTest ]; then \
+        cp /usr/src/app/revpi-pitest/build/src/piTest /usr/local/bin/piTest && \
+        chmod +x /usr/local/bin/piTest; \
+    else \
+        echo "piTest binary not found, checking locations:"; \
+        find /usr/src/app/revpi-pitest -name "piTest" -type f; \
+    fi
+
+# Keep container interactive
+CMD ["/bin/bash"]
