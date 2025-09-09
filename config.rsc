@@ -1,8 +1,8 @@
 {
   "App": {
     "name": "PiCtory",
-    "version": "1.3.10",
-    "saveTS": "20180827134752",
+    "version": "2.1.0",
+    "saveTS": "20250907150512",
     "language": "en",
     "layout": {
       "north": {
@@ -11,7 +11,7 @@
         "initHidden": false
       },
       "south": {
-        "size": 379,
+        "size": 286,
         "initClosed": false,
         "initHidden": false,
         "children": {
@@ -41,16 +41,16 @@
     }
   },
   "Summary": {
-    "inpTotal": 76,
-    "outTotal": 23
+    "inpTotal": 96,
+    "outTotal": 29
   },
   "Devices": [
     {
-      "GUID": "c6155769-2d06-a691-1634-7b44ef679f45",
+      "GUID": "2a6f0f84-ff24-2b59-5b11-8bdff40170f3",
       "id": "device_RevPiDIO_20160818_1_0_001",
       "type": "LEFT_RIGHT",
       "productType": "96",
-      "position": "31",
+      "position": "32",
       "name": "RevPi DIO",
       "bmk": "RevPi DIO",
       "inpVariant": 0,
@@ -402,7 +402,7 @@
       "out": {
         "0": [
           "O_1",
-          "1",
+          "0",
           "1",
           "70",
           true,
@@ -936,17 +936,607 @@
       "extend": {}
     },
     {
-      "GUID": "36a8770f-83fa-f329-59c6-7580979ba3e2",
-      "id": "device_RevPiCore_20170404_1_2_001",
-      "type": "BASE",
-      "productType": "95",
-      "position": "0",
-      "name": "RevPi Core V1.2",
-      "bmk": "RevPi Core V1.2",
+      "GUID": "0d1afd02-2207-38a6-0731-0ed404e47ec0",
+      "id": "device_RevPiAIO_20170301_1_0_001",
+      "type": "LEFT_RIGHT",
+      "productType": "103",
+      "position": "31",
+      "name": "RevPi AIO",
+      "bmk": "RevPi AIO",
       "inpVariant": 0,
       "outVariant": 0,
-      "comment": "This is a RevPiCore Device",
+      "comment": "",
       "offset": 113,
+      "inp": {
+        "0": [
+          "InputValue_1",
+          "0",
+          "16",
+          "0",
+          false,
+          "0000",
+          "",
+          ""
+        ],
+        "1": [
+          "InputValue_2",
+          "0",
+          "16",
+          "2",
+          false,
+          "0001",
+          "",
+          ""
+        ],
+        "2": [
+          "InputValue_3",
+          "0",
+          "16",
+          "4",
+          false,
+          "0002",
+          "",
+          ""
+        ],
+        "3": [
+          "InputValue_4",
+          "0",
+          "16",
+          "6",
+          false,
+          "0003",
+          "",
+          ""
+        ],
+        "4": [
+          "InputStatus_1",
+          "0",
+          "8",
+          "8",
+          false,
+          "0004",
+          "",
+          ""
+        ],
+        "5": [
+          "InputStatus_2",
+          "0",
+          "8",
+          "9",
+          false,
+          "0005",
+          "",
+          ""
+        ],
+        "6": [
+          "InputStatus_3",
+          "0",
+          "8",
+          "10",
+          false,
+          "0006",
+          "",
+          ""
+        ],
+        "7": [
+          "InputStatus_4",
+          "0",
+          "8",
+          "11",
+          false,
+          "0007",
+          "",
+          ""
+        ],
+        "8": [
+          "RTDValue_1",
+          "0",
+          "16",
+          "12",
+          false,
+          "0008",
+          "",
+          ""
+        ],
+        "9": [
+          "RTDValue_2",
+          "0",
+          "16",
+          "14",
+          false,
+          "0009",
+          "",
+          ""
+        ],
+        "10": [
+          "RTDStatus_1",
+          "0",
+          "8",
+          "16",
+          false,
+          "0010",
+          "",
+          ""
+        ],
+        "11": [
+          "RTDStatus_2",
+          "0",
+          "8",
+          "17",
+          false,
+          "0011",
+          "",
+          ""
+        ],
+        "12": [
+          "OutputStatus_1",
+          "0",
+          "8",
+          "18",
+          false,
+          "0012",
+          "",
+          ""
+        ],
+        "13": [
+          "OutputStatus_2",
+          "0",
+          "8",
+          "19",
+          false,
+          "0013",
+          "",
+          ""
+        ]
+      },
+      "out": {
+        "0": [
+          "OutputValue_1",
+          "0",
+          "16",
+          "20",
+          false,
+          "0014",
+          "",
+          ""
+        ],
+        "1": [
+          "OutputValue_2",
+          "0",
+          "16",
+          "22",
+          false,
+          "0015",
+          "",
+          ""
+        ]
+      },
+      "mem": {
+        "0": [
+          "Input1Range",
+          "1",
+          "8",
+          "24",
+          false,
+          "0016",
+          "You must use wire bridges for current measurement!",
+          ""
+        ],
+        "1": [
+          "Input1Multiplier",
+          "1",
+          "16",
+          "25",
+          false,
+          "0017",
+          "",
+          ""
+        ],
+        "2": [
+          "Input1Divisor",
+          "1",
+          "16",
+          "27",
+          false,
+          "0018",
+          "",
+          ""
+        ],
+        "3": [
+          "Input1Offset",
+          "0",
+          "16",
+          "29",
+          false,
+          "0019",
+          "",
+          ""
+        ],
+        "4": [
+          "Input2Range",
+          "1",
+          "8",
+          "31",
+          false,
+          "0020",
+          "You must use wire bridges for current measurement!",
+          ""
+        ],
+        "5": [
+          "Input2Multiplier",
+          "1",
+          "16",
+          "32",
+          false,
+          "0021",
+          "",
+          ""
+        ],
+        "6": [
+          "Input2Divisor",
+          "1",
+          "16",
+          "34",
+          false,
+          "0022",
+          "",
+          ""
+        ],
+        "7": [
+          "Input2Offset",
+          "0",
+          "16",
+          "36",
+          false,
+          "0023",
+          "",
+          ""
+        ],
+        "8": [
+          "Input3Range",
+          "1",
+          "8",
+          "38",
+          false,
+          "0024",
+          "You must use wire bridges for current measurement!",
+          ""
+        ],
+        "9": [
+          "Input3Multiplier",
+          "1",
+          "16",
+          "39",
+          false,
+          "0025",
+          "",
+          ""
+        ],
+        "10": [
+          "Input3Divisor",
+          "1",
+          "16",
+          "41",
+          false,
+          "0026",
+          "",
+          ""
+        ],
+        "11": [
+          "Input3Offset",
+          "0",
+          "16",
+          "43",
+          false,
+          "0027",
+          "",
+          ""
+        ],
+        "12": [
+          "Input4Range",
+          "1",
+          "8",
+          "45",
+          false,
+          "0028",
+          "You must use wire bridges for current measurement!",
+          ""
+        ],
+        "13": [
+          "Input4Multiplier",
+          "1",
+          "16",
+          "46",
+          false,
+          "0029",
+          "",
+          ""
+        ],
+        "14": [
+          "Input4Divisor",
+          "1",
+          "16",
+          "48",
+          false,
+          "0030",
+          "",
+          ""
+        ],
+        "15": [
+          "Input4Offset",
+          "0",
+          "16",
+          "50",
+          false,
+          "0031",
+          "",
+          ""
+        ],
+        "16": [
+          "ADC_DataRate",
+          "0",
+          "8",
+          "52",
+          false,
+          "0032",
+          "Use lowest value for highest precision and a maximum 50 Hz suppression",
+          ""
+        ],
+        "17": [
+          "RTD1Type",
+          "0",
+          "8",
+          "53",
+          false,
+          "0033",
+          "",
+          ""
+        ],
+        "18": [
+          "RTD1Wiring",
+          "0",
+          "8",
+          "54",
+          false,
+          "0034",
+          "You must use wire bridges for 2-wire sensors!",
+          ""
+        ],
+        "19": [
+          "RTD1Multiplier",
+          "1",
+          "16",
+          "55",
+          false,
+          "0035",
+          "",
+          ""
+        ],
+        "20": [
+          "RTD1Divisor",
+          "1",
+          "16",
+          "57",
+          false,
+          "0036",
+          "",
+          ""
+        ],
+        "21": [
+          "RTD1Offset",
+          "0",
+          "16",
+          "59",
+          false,
+          "0037",
+          "",
+          ""
+        ],
+        "22": [
+          "RTD2Type",
+          "0",
+          "8",
+          "61",
+          false,
+          "0038",
+          "",
+          ""
+        ],
+        "23": [
+          "RTD2Wiring",
+          "0",
+          "8",
+          "62",
+          false,
+          "0039",
+          "You must use wire bridges for 2-wire sensors!",
+          ""
+        ],
+        "24": [
+          "RTD2Multiplier",
+          "1",
+          "16",
+          "63",
+          false,
+          "0040",
+          "",
+          ""
+        ],
+        "25": [
+          "RTD2Divisor",
+          "1",
+          "16",
+          "65",
+          false,
+          "0041",
+          "",
+          ""
+        ],
+        "26": [
+          "RTD2Offset",
+          "0",
+          "16",
+          "67",
+          false,
+          "0042",
+          "",
+          ""
+        ],
+        "27": [
+          "Output1Range",
+          "0",
+          "8",
+          "69",
+          false,
+          "0043",
+          "",
+          ""
+        ],
+        "28": [
+          "Output1EnableSlew",
+          "0",
+          "8",
+          "70",
+          false,
+          "0044",
+          "Enable slew rate deceleration",
+          ""
+        ],
+        "29": [
+          "Output1SlewStepSize",
+          "0",
+          "8",
+          "71",
+          false,
+          "0045",
+          "Slew rate step size",
+          ""
+        ],
+        "30": [
+          "Output1SlewClock",
+          "0",
+          "8",
+          "72",
+          false,
+          "0046",
+          "lock rate of slew rate deceleration in kHz",
+          ""
+        ],
+        "31": [
+          "Output1Multiplier",
+          "1",
+          "16",
+          "73",
+          false,
+          "0047",
+          "",
+          ""
+        ],
+        "32": [
+          "Output1Divisor",
+          "1",
+          "16",
+          "75",
+          false,
+          "0048",
+          "",
+          ""
+        ],
+        "33": [
+          "Output1Offset",
+          "0",
+          "16",
+          "77",
+          false,
+          "0049",
+          "",
+          ""
+        ],
+        "34": [
+          "Output2Range",
+          "0",
+          "8",
+          "79",
+          false,
+          "0050",
+          "",
+          ""
+        ],
+        "35": [
+          "Output2EnableSlew",
+          "0",
+          "8",
+          "80",
+          false,
+          "0051",
+          "Enable slew rate deceleration",
+          ""
+        ],
+        "36": [
+          "Output2SlewStepSize",
+          "0",
+          "8",
+          "81",
+          false,
+          "0052",
+          "Slew rate step size",
+          ""
+        ],
+        "37": [
+          "Output2SlewClock",
+          "0",
+          "8",
+          "82",
+          false,
+          "0053",
+          "lock rate of slew rate deceleration in kHz",
+          ""
+        ],
+        "38": [
+          "Output2Multiplier",
+          "1",
+          "16",
+          "83",
+          false,
+          "0054",
+          "",
+          ""
+        ],
+        "39": [
+          "Output2Divisor",
+          "1",
+          "16",
+          "85",
+          false,
+          "0055",
+          "",
+          ""
+        ],
+        "40": [
+          "Output2Offset",
+          "0",
+          "16",
+          "87",
+          false,
+          "0056",
+          "",
+          ""
+        ]
+      },
+      "extend": {}
+    },
+    {
+      "GUID": "b7c6a7ab-d4c9-4120-048b-7f15293acc94",
+      "id": "device_RevPiConnect4_20230409_1_0_001",
+      "type": "BASE",
+      "productType": "136",
+      "position": "0",
+      "name": "RevPi Connect 4",
+      "bmk": "RevPi Connect 4",
+      "inpVariant": 0,
+      "outVariant": 0,
+      "comment": "This is a RevPi Connect 4 Device",
+      "offset": 202,
       "inp": {
         "0": [
           "RevPiStatus",
@@ -1001,7 +1591,7 @@
       },
       "out": {
         "0": [
-          "RevPiLED",
+          "RevPiOutput",
           "0",
           "8",
           "6",
@@ -1027,6 +1617,16 @@
           "9",
           false,
           "0007",
+          "",
+          ""
+        ],
+        "3": [
+          "RevPiLED",
+          "0",
+          "16",
+          "11",
+          true,
+          "0008",
           "",
           ""
         ]
